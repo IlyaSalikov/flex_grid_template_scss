@@ -1,0 +1,74 @@
+@media screen and (max-width: 768px) {
+    
+    %flex-sidebar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+}
+
+    %grid-col {
+        grid-column: 1/4;
+    }
+    
+    .container {
+        grid-template-rows: repeat(8, auto);
+    }
+    
+    .hero {
+        display: none;
+    }
+    
+    .sidebar {
+        @extend %grid-col;
+        grid-row: 2/3;
+        border-top: none;
+    }
+    
+    .sidebar h3 {
+        text-align: center;
+    }
+    
+    .sidebar ul {
+        @extend %flex-sidebar;
+    }
+    
+    main {
+        @extend %grid-col;
+        grid-row: 3/4;
+    }
+    
+    .help {
+        @extend %grid-col;
+        grid-row: 4/5;
+    }
+    
+    .gallery {
+        @extend %grid-col;
+        grid-row: 5/6;
+    }
+    
+    .sidebar-related {
+        @extend %grid-col;
+        grid-row: 6/7;
+        padding: 10px;
+    }
+    
+    .sidebar-related h3 {
+        text-align: center;
+    }
+    
+    .sidebar-related ul {
+        @extend %flex-sidebar;
+        list-style-type: none;
+    }
+    
+    .footer {
+        @extend %grid-col;
+        grid-row: 7/8;
+        max-height: 100px;
+        margin: 0;
+        padding: 5px;
+    }
+    
+}
